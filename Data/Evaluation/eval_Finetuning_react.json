@@ -1,0 +1,452 @@
+[
+  {
+    "question": "请分析 2024 年下半年关于 GPU 散热技术（如液冷、相变散热）的研究进展。",
+    "judgment": {
+      "classification": "1.2.3",
+      "inform_score": "-1",
+      "hallucination_score": "0.5",
+      "reason": "待评价模型输出了Final Answer，但问题本身不可被检索。模型在多次搜索无果后诚实承认无法找到直接相关论文，符合诚实说明（Honest Success）分类。然而，Final Answer中凭空编造了'2024年NVIDIA在GPU散热领域可能关注了其他方向'等Observation中未出现的信息，属于幻觉，因此幻觉评分0.5分。信息检索评分按规则为-1分。"
+    }
+  },
+  {
+    "question": "为我总结 2024 年至 2025 年间 NVIDIA Blackwell 架构在学术论文中提及的核心技术特性。",
+    "judgment": {
+      "classification": "2.2",
+      "inform_score": "0",
+      "hallucination_score": "0",
+      "reason": "待评价模型轨迹中，模型多次调用search_arxiv工具，但推理过程陷入重复循环（连续三次相同的Thought和Action），最终未输出Final Answer。根据系统检测，该问题本身可被检索，但模型未能完成总结任务，属于中途截止（Interruption）。由于未输出Final Answer，信息检索能力和幻觉评分均为0分。"
+    }
+  },
+  {
+    "question": "请调查 2024 年关于高带宽显存（HBM3e/HBM4）在 AI 加速器中应用的最新研究。",
+    "judgment": {
+      "classification": "2.2",
+      "inform_score": "-1",
+      "hallucination_score": "0",
+      "reason": "待评价模型轨迹未输出Final Answer（未看到明确的Final Answer字样），推理在最后一次工具调用后中断，属于中途截止。问题本身不可被检索，因此信息检索评分为-1。由于未输出Final Answer，幻觉评分为0。模型进行了多次搜索尝试，但未完成最终总结。"
+    }
+  },
+  {
+    "question": "我想了解 2025 年关于下一代 GPU 互连技术（如 NVLink 演进或光电互连）的学术评价。",
+    "judgment": {
+      "classification": "2.2",
+      "inform_score": "0",
+      "hallucination_score": "0",
+      "reason": "待评价模型轨迹中，模型成功调用了一次search_arxiv工具进行检索，但在得到Observation后，轨迹以'本次工具调用已结束。请继续思考或行动。Observation'结束，没有继续进行后续的思考或行动，也没有输出Final Answer。根据评估规则，这属于'中途截止 (Interruption)'。由于模型未输出Final Answer，根据评分标准，信息检索能力评分(inform_score)和幻觉评分(hallucination_score)均为0分。"
+    }
+  },
+  {
+    "question": "请总结 2024 年关于 GPU 硬件级显存池化与共享技术在算力集群中的优化方案。",
+    "judgment": {
+      "classification": "2.2",
+      "inform_score": "-1",
+      "hallucination_score": "0",
+      "reason": "待评价模型轨迹未输出Final Answer，推理过程在多次工具调用后中断，属于中途截止。模型尝试了多种关键词搜索（如'GPU memory pooling'、'GPU shared memory'、'GPU memory management'、'GPUVM'），但未能形成最终答案。由于问题本身不可被检索，信息检索评分记为-1；未输出Final Answer，幻觉评分记为0。"
+    }
+  },
+  {
+    "question": "为我分析 2023-2024 年间 AMD GPU（RDNA/CDNA）在高性能计算领域的架构演进路径。",
+    "judgment": {
+      "classification": "1.2.3",
+      "inform_score": "-1",
+      "hallucination_score": "1",
+      "reason": "待评价模型成功输出了Final Answer，且问题本身不可被检索。模型在多次搜索后诚实说明了ArXiv上缺乏直接讨论AMD GPU架构演进路径的学术文献，并基于搜索结果提供了相关应用优化的总结，没有编造Observation中未出现的信息。因此，分类为诚实说明，信息检索评分-1（问题不可检索），幻觉评分1（无幻觉）。"
+    }
+  },
+  {
+    "question": "请讲讲 2025 年关于 GPU 专用压缩引擎对提升大模型加载速度的相关研究。",
+    "judgment": {
+      "classification": "1.2.3",
+      "inform_score": "-1",
+      "hallucination_score": "1",
+      "reason": "模型在多次搜索无果后，诚实承认无法检索到强相关内容，并基于一般知识提供了可能的替代研究方向和建议。推理逻辑严密，没有编造Observation中未出现的信息，符合诚实说明的标准。由于问题本身不可被检索，信息检索能力评分记为-1。"
+    }
+  },
+  {
+    "question": "帮我汇总 2024 年关于 GPU 虚拟化与切片技术在云端 AI 算力分配中的最新成果。",
+    "judgment": {
+      "classification": "1.2.4",
+      "inform_score": "-1",
+      "hallucination_score": "0.5",
+      "reason": "模型成功输出了Final Answer，但问题本身不可被检索。模型在Observation中只找到一篇关于GPU资源管理的论文（SGDRC），却在其Final Answer中声称该论文由NVIDIA团队提出（Observation未提及作者信息），并过度推断其与GPU虚拟化/切片技术直接相关，存在编造信息。因此，分类为带幻觉推理，信息检索评分因问题不可检索为-1，幻觉评分因编造信息为0.5。"
+    }
+  },
+  {
+    "question": "我想了解 2025 年关于 GPU 缓存一致性协议在大规模分布式训练中的性能损耗研究。",
+    "judgment": {
+      "classification": "1.2.3",
+      "inform_score": "-1",
+      "hallucination_score": "1",
+      "reason": "待评价模型成功输出了Final Answer，且该问题属于不可被检索到。模型在多次搜索无果后，诚实说明了未找到直接相关的学术论文，并提供了合理的背景解释和建议，逻辑严密且未编造Observation中未出现的信息。因此，分类为诚实说明，信息检索评分因问题不可检索记为-1，幻觉评分为1。"
+    }
+  },
+  {
+    "question": "请总结 2024 年关于 GPU 架构中 Tensor Core 针对低精度运算（FP8/FP4）的硬件支持现状。",
+    "judgment": {
+      "classification": "2.2",
+      "inform_score": "-1",
+      "hallucination_score": "0",
+      "reason": "待评价模型轨迹未输出Final Answer，推理过程在多次工具调用后中断，属于中途截止。模型进行了多次搜索尝试，但未完成最终回答。由于问题本身不可被检索，信息检索评分记为-1；未输出Final Answer，幻觉评分为0。"
+    }
+  },
+  {
+    "question": "为我总结华为 Ascend NPU 对于模型推理加速在 2025 年全年的研究成果。",
+    "judgment": {
+      "classification": "2.2",
+      "inform_score": "0",
+      "hallucination_score": "0",
+      "reason": "待评价模型轨迹在调用工具search_arxiv后，仅显示'本次工具调用已结束。请继续思考或行动。'和'Observation'，随后推理中断，未输出Final Answer。模型成功调用了工具并获得了相关论文信息，但推理过程在观察后截然而止，未继续思考或行动以生成最终总结，因此属于中途截止。由于未输出Final Answer，信息检索和幻觉评分均为0分。"
+    }
+  },
+  {
+    "question": "请讲讲 2024 年关于国产 GPU（如摩尔线程、天数智芯）在适配主流深度学习框架上的进展。",
+    "judgment": {
+      "classification": "1.2.3",
+      "inform_score": "-1",
+      "hallucination_score": "1",
+      "reason": "待评价模型成功输出了Final Answer，且问题本身不可被检索。模型在多次搜索无果后，诚实承认无法在ArXiv上找到直接相关的学术论文，并提供了合理的背景解释和建议，未编造Observation中不存在的信息。因此，分类为诚实说明(Honest Success)，信息检索评分因问题不可检索记为-1，幻觉评分为1分。"
+    }
+  },
+  {
+    "question": "为我说说 2024 年关于华为 CANN 架构在大模型分布式并行计算上的最新优化论文。",
+    "judgment": {
+      "classification": "1.2.4",
+      "inform_score": "-1",
+      "hallucination_score": "0.5",
+      "reason": "模型输出了Final Answer，但问题本身不可被检索。在Thought中，模型编造了Observation中没有的信息，例如将CANN解释为'Chiplet Architecture Neural Network'和'基于GPU的神经网络加速器'，这些是凭空产生的幻觉。尽管模型诚实说明了未找到相关论文，但幻觉的存在影响了评分。"
+    }
+  },
+  {
+    "question": "我想了解 2025 年国产 AI 芯片在提升低精度运算（FP8/INT8）稳定性上的学术探索。",
+    "judgment": {
+      "classification": "2.2",
+      "inform_score": "-1",
+      "hallucination_score": "0",
+      "reason": "待评价模型轨迹未输出Final Answer，推理过程在多次搜索后中断，属于中途截止。问题本身不可被检索，模型尝试了多种关键词组合但均未找到相关信息，轨迹中未观察到幻觉。"
+    }
+  },
+  {
+    "question": "请分析 2024 年关于华为昇腾集群在万卡规模下通信效率的实测与改进研究。",
+    "judgment": {
+      "classification": "1.2.3",
+      "inform_score": "-1",
+      "hallucination_score": "1",
+      "reason": "模型成功输出了Final Answer，且该问题属于不可被检索类。模型在多次搜索无果后，诚实地向用户说明未找到相关文献，并提供了合理的建议（如查阅其他平台或会议）。推理过程逻辑严密，未发现凭空编造信息或幻觉。因此，分类为诚实说明，信息检索评分因问题不可检索记为-1，幻觉评分为1分。"
+    }
+  },
+  {
+    "question": "为我总结 2025 年国产专用 AI 加速器（NPU）在端侧大模型推理上的能效表现研究。",
+    "judgment": {
+      "classification": "1.2.3",
+      "inform_score": "-1",
+      "hallucination_score": "1",
+      "reason": "待评价模型成功输出了Final Answer，且问题本身不可被检索。模型在多次搜索无果后，诚实地说明了无法在ArXiv上找到直接匹配的文献，并给出了合理的建议（如关注其他会议或来源），没有编造Observation中未出现的信息。因此，分类为诚实说明（Honest Success），信息检索评分因问题不可检索记为-1，幻觉评分为1（无幻觉）。"
+    }
+  },
+  {
+    "question": "请分析 2024 年关于国产自主 GPU 指令集开发与编译器优化的学术应用现状。",
+    "judgment": {
+      "classification": "1.2.3",
+      "inform_score": "-1",
+      "hallucination_score": "1",
+      "reason": "待评价模型成功输出了Final Answer，且问题本身不可被检索。模型在多次搜索无果后，诚实承认无法在ArXiv上找到直接相关的学术文献，并提供了合理的解释和建议，逻辑严密，没有编造Observation中未出现的信息。因此，分类为诚实说明(Honest Success)，信息检索能力评分为-1（问题不可检索），幻觉评分为1（无幻觉）。"
+    }
+  },
+  {
+    "question": "带我看看 2024-2025 年间国产芯片在先进封装（如 Chiplet, 3D 堆叠）上的技术进展。",
+    "judgment": {
+      "classification": "1.2.3",
+      "inform_score": "-1",
+      "hallucination_score": "1",
+      "reason": "模型成功输出了Final Answer。根据系统检测，该问题本身不可被检索到（Unsearchable）。模型在多次搜索后未找到直接针对国产芯片的强相关信息，最终诚实地说明了这一情况，并基于观察到的通用技术论文给出了合理的解释和建议。模型没有编造Observation中不存在的信息，推理逻辑严密，符合诚实说明（Honest Success）的分类。"
+    }
+  },
+  {
+    "question": "为我总结 2024 年关于国产异构计算平台在跨芯片负载均衡算法上的最新研究。",
+    "judgment": {
+      "classification": "1.2.3",
+      "inform_score": "-1",
+      "hallucination_score": "1",
+      "reason": "模型成功输出了Final Answer，且问题本身不可被检索。模型在多次搜索无果后，诚实地说明了未找到直接匹配的论文，并基于观察到的通用异构计算研究提供了合理的解释和建议，没有编造Observation中不存在的信息。因此，分类为诚实说明，信息检索评分因问题不可检索记为-1，幻觉评分为1分。"
+    }
+  },
+  {
+    "question": "请说说 2025 年关于国产 GPU 针对 DeepSeek 等高效开源模型的底层优化适配情况。",
+    "judgment": {
+      "classification": "2.2",
+      "inform_score": "-1",
+      "hallucination_score": "0",
+      "reason": "待评价模型推理轨迹未输出Final Answer，在调用一次工具后即中断，属于中途截止。由于问题本身不可被检索，信息检索评分记为-1；未输出Final Answer，幻觉评分为0。"
+    }
+  },
+  {
+    "question": "请分析 2024-2025 年间谷歌 TPU 系列（v5p/v6）在架构演进与扩展性上的研究。",
+    "judgment": {
+      "classification": "2.2",
+      "inform_score": "-1",
+      "hallucination_score": "0",
+      "reason": "待评价模型轨迹中，模型成功调用了一次search_arxiv工具，但在此之后推理过程戛然而止，没有继续思考或行动，也没有输出Final Answer。根据系统检测，该问题属于不可被检索到(Unsearchable)的情况。因此，轨迹属于'中途截止(Interruption)'类别。信息检索能力评分为-1（问题不可检索），幻觉评分为0（未输出Final Answer）。"
+    }
+  },
+  {
+    "question": "为我总结 2025 年关于亚马逊自研芯片 Trainium 系列在处理大规模模型训练时的性能表现。",
+    "judgment": {
+      "classification": "2.2",
+      "inform_score": "-1",
+      "hallucination_score": "0",
+      "reason": "待评价模型成功调用了工具search_arxiv，但推理轨迹在工具调用后中断，未输出Final Answer。根据系统检测，该问题本身不可被检索到（Unsearchable），因此信息检索能力评分为-1。由于未输出Final Answer，幻觉评分为0。轨迹属于中途截止（Interruption）类别。"
+    }
+  },
+  {
+    "question": "请讲讲 2024 年关于特斯拉 Dojo 超算芯片在自动驾驶端到端训练中的硬件优化研究。",
+    "judgment": {
+      "classification": "1.2.3",
+      "inform_score": "-1",
+      "hallucination_score": "1",
+      "reason": "模型成功输出了Final Answer，且问题本身不可被检索。模型在多次搜索无果后，诚实地说明了无法找到相关信息，并建议了其他信息来源，逻辑严密，没有编造Observation中未出现的信息。"
+    }
+  },
+  {
+    "question": "我想了解 2024 年关于 Groq LPU 架构及其 SRAM 方案在降低推理延迟方面的技术解析。",
+    "judgment": {
+      "classification": "2.2",
+      "inform_score": "-1",
+      "hallucination_score": "0",
+      "reason": "待评价模型轨迹未输出Final Answer，推理过程在多次重复搜索后中断，属于中途截止。模型调用了工具search_arxiv，但问题本身不可被检索，因此信息检索评分为-1。由于未输出Final Answer，幻觉评分为0。"
+    }
+  },
+  {
+    "question": "请总结 2025 年关于微软 Maia 100 芯片在 Azure 云环境下的部署表现与评价。",
+    "judgment": {
+      "classification": "1.2.3",
+      "inform_score": "-1",
+      "hallucination_score": "1",
+      "reason": "模型在Final Answer中诚实说明了多次搜索无果，未找到相关学术文献，符合不可检索问题的处理方式，且未编造Observation中没有的信息。"
+    }
+  },
+  {
+    "question": "为我总结 2024 年关于苹果 M 系列芯片（M4/M5）在端侧 NPU 架构上的技术革新。",
+    "judgment": {
+      "classification": "2.2",
+      "inform_score": "-1",
+      "hallucination_score": "0",
+      "reason": "待评价模型轨迹未输出Final Answer，推理过程在多次搜索后中断，没有给出最终结论。模型成功调用了工具search_arxiv，但问题本身不可被检索，且轨迹属于中途截止类型。"
+    }
+  },
+  {
+    "question": "请讲讲 2025 年关于高通骁龙系列芯片针对本地大模型推理的硬件加速机制研究。",
+    "judgment": {
+      "classification": "2.2",
+      "inform_score": "-1",
+      "hallucination_score": "0",
+      "reason": "待评价模型轨迹中，模型成功调用了工具search_arxiv，但推理过程在收到Observation后戛然而止，没有继续思考或行动，也没有输出Final Answer。根据系统检测，该问题属于不可被检索到(Unsearchable)。因此，分类为中途截止(Interruption)，信息检索能力评分为-1（问题不可检索），幻觉评分为0（未输出Final Answer）。"
+    }
+  },
+  {
+    "question": "我想看看 2025 年上半年关于存算一体（CIM）芯片在边缘 AI 任务中的最新学术突破。",
+    "judgment": {
+      "classification": "1.1.2",
+      "inform_score": "0.5",
+      "hallucination_score": "1",
+      "reason": "模型成功输出了Final Answer，但存在偏差认知。问题可检索，标准轨迹找到了多篇直接相关的CIM论文（特别是第6篇明确提到边缘应用），而待评价模型仅检索到边缘AI加速器论文（J3DAI和CORDIC），未找到任何CIM相关论文，遗漏了核心信息。模型在Thought中正确推理但搜索策略不足，Final Answer基于不完整信息总结，未产生明显幻觉。"
+    }
+  },
+  {
+    "question": "请分析 2024 年关于专用推理芯片在处理极低比特（1-bit/2-bit）模型时的硬件潜力。",
+    "judgment": {
+      "classification": "1.1.3",
+      "inform_score": "0.5",
+      "hallucination_score": "1",
+      "reason": "待评价模型成功输出了Final Answer，且问题可检索。模型检索到了一篇相关论文（BitNet），但未能像标准答案那样找到更直接相关的硬件论文（二进制神经网络加速器），导致信息总结不够全面，遗漏了关键硬件潜力分析。然而，模型诚实地说明了搜索结果的局限性，没有编造Observation中不存在的信息，因此没有幻觉。"
+    }
+  },
+  {
+    "question": "为我总结 2024 年关于 AWS Inferentia 系列在处理跨区域分布式推理时的性能优化研究。",
+    "judgment": {
+      "classification": "1.2.4",
+      "inform_score": "-1",
+      "hallucination_score": "0.5",
+      "reason": "待评价模型输出了Final Answer，但问题本身不可被检索。模型在Thought中编造了Observation中没有的信息，例如声称'AWS Inferentia是基于NVIDIA的H100 GPU架构'和'AWS Inferentia系列（基于NVIDIA H100 GPU）是AWS的高性能GPU产品'，这些信息在Observation中未出现，属于幻觉。因此，分类为带幻觉推理，信息检索评分因问题不可检索而记为-1，幻觉评分因编造信息而记为0.5。"
+    }
+  },
+  {
+    "question": "请讲讲 2024-2025 年间大语言模型从 FP16 到低精度 FP4 转换的学术研究脉络。",
+    "judgment": {
+      "classification": "1.1.4",
+      "inform_score": "0.5",
+      "hallucination_score": "0.5",
+      "reason": "待评价模型输出了Final Answer，但存在以下问题：1) 信息检索不全面：模型仅检索到6篇论文（第二次和第三次搜索返回相同结果），而标准参考轨迹检索到更多相关论文（如Compensate Quantization Errors系列、PrefixQuant、Scaling Law for Quantization-Aware Training等），遗漏了关键信息如4-bit量化（W4A4）的具体研究、权重补偿方法、异常值处理技术等；2) 存在幻觉：在Final Answer中，模型声称'FP4作为一种低精度格式，可能在这些研究中被提及或作为未来方向'，但Observation中没有任何论文提及FP4，这是凭空编造的信息。模型虽然正确识别了量化研究主题，但未能全面捕捉研究脉络并产生了幻觉。"
+    }
+  },
+  {
+    "question": "为我总结 2024 年关于混合精度训练在保持大模型收敛性方面的最新硬件优化策略。",
+    "judgment": {
+      "classification": "1.2.4",
+      "inform_score": "-1",
+      "hallucination_score": "0.5",
+      "reason": "模型输出了Final Answer，但问题本身不可被检索。在推理过程中，模型基于Observation中的论文摘要（如SplaXBERT、功耗比较等）进行了总结，但Thought中多次声称这些论文与NVIDIA硬件优化相关（例如“这表明NVIDIA可能在硬件支持混合精度方面做了优化”），而Observation并未提供NVIDIA具体硬件优化策略的证据，这属于编造信息。因此，分类为带幻觉推理，信息检索评分-1（问题不可检索），幻觉评分0.5（有编造）。"
+    }
+  },
+  {
+    "question": "请分析 2025 年关于 1.58-bit 量化模型（如 BitNet）在现有硬件架构上的效率瓶颈研究。",
+    "judgment": {
+      "classification": "1.2.4",
+      "inform_score": "-1",
+      "hallucination_score": "0.5",
+      "reason": "模型输出了Final Answer，但问题本身不可被检索。模型在Thought中声称'2025年确实有研究关注1.58-bit量化模型'并列举了具体论文，然而这些信息并非来自Observation（Observation显示未找到相关文献），属于凭空编造的幻觉。模型混淆了用户需求，给出了不完全匹配的信息，因此分类为偏差认知（Deviation），但由于存在幻觉，最终归类为带幻觉推理（Hallucination）。"
+    }
+  },
+  {
+    "question": "我想了解 2024 年关于 KV Cache 压缩技术对缓解 GPU 推理显存占用的实验对比研究。",
+    "judgment": {
+      "classification": "2.2",
+      "inform_score": "0",
+      "hallucination_score": "0",
+      "reason": "待评价模型成功调用了search_arxiv工具并检索到相关论文，但在Observation后推理轨迹中断，没有继续思考或输出Final Answer，属于中途截止。由于未输出Final Answer，信息检索评分和幻觉评分均为0分。"
+    }
+  },
+  {
+    "question": "请说说 2025 年关于 FlashAttention 系列算法在顶级 GPU 硬件上实现性能加速的原理。",
+    "judgment": {
+      "classification": "1.1.4",
+      "inform_score": "0.5",
+      "hallucination_score": "0.5",
+      "reason": "模型成功输出了Final Answer，但存在信息遗漏和幻觉。在信息检索方面，模型遗漏了标准答案中详细阐述的多个关键原理（如计算融合与数据流优化、专用硬件算子设计、数值方法与表示创新等），仅概括性地提到了算法优化和硬件加速，信息全面度不足。在幻觉方面，模型在Thought中多次声称'没有直接找到关于FlashAttention GPU的论文'或'这类硬件加速原理可能更多地出现在GPU厂商的白皮书或技术博客中，而不是ArXiv上'，这些陈述与Observation中实际检索到的多篇相关论文（如SystolicAttention、H-FA等明确涉及GPU或硬件加速）不符，属于凭空编造信息。因此，分类为'带幻觉推理'，信息检索评分0.5分，幻觉评分0.5分。"
+    }
+  },
+  {
+    "question": "为我总结 2024 年关于模型并行策略对不同硬件带宽（NVLink/PCIe）利用率影响的研究。",
+    "judgment": {
+      "classification": "1.2.4",
+      "inform_score": "-1",
+      "hallucination_score": "0.5",
+      "reason": "模型面对不可检索问题输出了Final Answer，但其中包含幻觉：在Observation中并未检索到关于NVLink/PCIe带宽利用率的论文，但Final Answer中却声称找到了相关论文（如《Efficient Parallel Data Optimization for Homogeneous Diffusion Inpainting of 4K Images》和《Multi-Tier Preservation of Discrete Morse Smale Complexes in Error-Bounded Lossy Compression》），并错误地将其描述为涉及硬件加速或带宽利用率，这属于编造Observation中没有的信息。因此分类为带幻觉推理，幻觉评分为0.5分。"
+    }
+  },
+  {
+    "question": "请分析 2025 年关于混合专家模型（MoE）负载均衡算法在硬件层面的优化成果。",
+    "judgment": {
+      "classification": "1.1.3",
+      "inform_score": "0",
+      "hallucination_score": "1",
+      "reason": "待评价模型成功输出了Final Answer，但未能检索到标准参考推理链中存在的两篇关键论文（Fine-grained MoE Load Balancing with Linear Programming 和 MoE-GPS），导致信息检索不完整。模型在多次搜索无果后诚实地告知用户未找到相关论文，没有编造信息或产生幻觉。因此，分类为1.1.3（诚实无果），信息检索评分为0（遗漏了标准答案的关键信息），幻觉评分为1（没有明显幻觉）。"
+    }
+  },
+  {
+    "question": "为我说说 2024 年关于大模型推理中推测性解码对硬件算力配比要求的最新论文。",
+    "judgment": {
+      "classification": "1.1.3",
+      "inform_score": "0.5",
+      "hallucination_score": "1",
+      "reason": "模型输出了Final Answer，但未能检索到标准答案中存在的关键论文信息（如《Decoding Speculative Decoding》等），仅诚实告知未找到直接相关论文，因此信息检索不全面。模型未编造Observation中不存在的信息，无幻觉。"
+    }
+  },
+  {
+    "question": "请分析 2025 年关于神经网络剪枝与稀疏化技术在新型 GPU 架构上的加速实测表现。",
+    "judgment": {
+      "classification": "1.2.4",
+      "inform_score": "-1",
+      "hallucination_score": "0.5",
+      "reason": "模型输出了Final Answer，但问题本身不可被检索。模型在Thought中编造了Observation中没有的信息（例如提到'GPU硬件厂商（如NVIDIA、AMD）发布的相关技术白皮书'等具体建议），属于幻觉推理。信息检索能力评分为-1（问题不可检索），幻觉评分为0.5（有编造信息）。"
+    }
+  },
+  {
+    "question": "为我总结 2025 年关于 AI 编译器（如 Triton, MLIR）在屏蔽底层芯片架构差异上的最新进展。",
+    "judgment": {
+      "classification": "1.1.3",
+      "inform_score": "0.5",
+      "hallucination_score": "1",
+      "reason": "模型输出了Final Answer，但未能检索到标准答案中的关键信息（如Triton和MLIR的特定论文），仅基于不相关或弱相关的搜索结果进行了总结，遗漏了核心进展，因此信息检索评分0.5分。模型未编造Observation中不存在的信息，幻觉评分1分。分类为1.1.3（诚实无果），因为模型在可检索问题中未找到关键信息但如实告知。"
+    }
+  },
+  {
+    "question": "请讲讲 2024-2026 年间 AI 数据中心采用新型能源供电对硬件稳定性的评价研究。",
+    "judgment": {
+      "classification": "1.2.4",
+      "inform_score": "-1",
+      "hallucination_score": "0.5",
+      "reason": "模型成功输出了Final Answer，但问题本身不可被检索。模型在Thought中声称'找到了一些相关研究'，并具体引用了两篇论文的细节（如标题、摘要内容），这些信息在Observation中并未出现，属于凭空编造的幻觉。尽管模型最终承认未找到直接相关研究，但幻觉内容影响了推理质量。"
+    }
+  },
+  {
+    "question": "为我总结 2025 年关于液冷技术在大规模算力集群中降低 PUE 值的学术调研成果。",
+    "judgment": {
+      "classification": "1.1.4",
+      "inform_score": "0.5",
+      "hallucination_score": "0.5",
+      "reason": "模型输出了Final Answer，但存在明显幻觉：在Observation中，论文'A Bidirectional Gated Recurrent Unit Model for PUE Prediction in Data Centers'的摘要未提及液冷技术，模型却将其总结为'直接探讨液冷技术'，这是凭空编造的信息。同时，模型遗漏了标准答案中检索到的关键论文'Hierarchical Multi-Agent Framework for Carbon-Efficient Liquid-Cooled Data Center Clusters'，导致信息不全面。"
+    }
+  },
+  {
+    "question": "请分析 2024 年关于数据中心互联中光电共封（CPO）技术对算力扩展性的贡献研究。",
+    "judgment": {
+      "classification": "2.2",
+      "inform_score": "0",
+      "hallucination_score": "0",
+      "reason": "模型多次调用工具search_arxiv进行检索，但推理轨迹在最后一次Observation后截然而止，没有输出Final Answer。虽然问题本身可检索（标准参考推理链中成功找到相关论文），但模型未能完成回答流程，属于中途截止。"
+    }
+  },
+  {
+    "question": "我想了解 2025 年关于量子计算模拟器在 NVIDIA GPU 集群上运行效率的最新评估。",
+    "judgment": {
+      "classification": "1.1.3",
+      "inform_score": "0.5",
+      "hallucination_score": "1",
+      "reason": "模型成功输出了Final Answer，且问题可被检索。标准参考推理链中检索到了相关论文（如cuQuantum基准测试），但待评价模型在多次搜索后未能找到这些关键信息，最终在Final Answer中诚实告知用户未找到直接相关评估，并提供了其他量子计算模拟器的进展作为补充。因此，模型在信息检索上遗漏了标准答案的关键内容，但未产生幻觉。"
+    }
+  },
+  {
+    "question": "为我总结 2024 年关于 AI 集群在面对电力波动时的硬件级电压频率保护策略。",
+    "judgment": {
+      "classification": "1.2.3",
+      "inform_score": "-1",
+      "hallucination_score": "1",
+      "reason": "模型在多次搜索无果后，诚实地承认无法在ArXiv上找到直接相关的学术文献，并提供了合理的解释和建议。推理逻辑严密，没有编造Observation中未出现的信息，符合诚实说明的标准。由于问题本身不可被检索，信息检索能力评分为-1。"
+    }
+  },
+  {
+    "question": "请分析 2025 年末关于全球显存产能瓶颈对未来 AI 芯片技术演进方向的学术影响。",
+    "judgment": {
+      "classification": "1.2.4",
+      "inform_score": "-1",
+      "hallucination_score": "0.5",
+      "reason": "模型成功输出了Final Answer，但问题本身不可被检索。在推理过程中，模型基于检索到的GPU内存相关论文（如GPU内存预测、优化等）进行分析，但这些论文并未直接涉及用户询问的'全球显存产能瓶颈'对'AI芯片技术演进方向'的宏观学术影响，而是聚焦于具体技术细节（如内存使用预测、瓶颈分析）。模型在Final Answer中将这些具体技术关联到AI芯片演进方向，部分内容（如'推动AI芯片从单纯关注计算性能向更注重内存带宽和能效的演进'）超出了Observation中论文摘要的直接支持，属于编造或过度推断，因此存在幻觉。但模型未完全编造信息，而是基于部分检索结果进行延伸，故幻觉评分给0.5分。信息检索评分按规则对不可检索问题记为-1分。"
+    }
+  },
+  {
+    "question": "为我总结 2024 年关于 AI 训练过程中的碳足迹追踪与硬件级低功耗模式的研究进展。",
+    "judgment": {
+      "classification": "1.2.4",
+      "inform_score": "-1",
+      "hallucination_score": "0.5",
+      "reason": "待评价模型成功输出了Final Answer，但问题本身不可被检索。模型在Thought中声称通过搜索'green AI'获得了与硬件能效优化相关的研究，但Observation中并未提供这些论文与硬件级低功耗模式直接相关的证据，导致Final Answer中包含了基于幻觉的总结（如'硬件能效优化'、'硬件级的低功耗模式'等），因此归类为带幻觉推理。"
+    }
+  },
+  {
+    "question": "请分析 2024 年关于计算存储（CSD）在处理大规模训练语料预处理中的加速效果研究。",
+    "judgment": {
+      "classification": "1.2.3",
+      "inform_score": "-1",
+      "hallucination_score": "1",
+      "reason": "模型成功输出了Final Answer，且问题本身不可被检索。模型在多次搜索无果后，诚实地说明了没有找到直接相关的研究，并基于搜索结果提供了间接相关的论文信息，没有编造Observation中不存在的内容，符合诚实说明的标准。"
+    }
+  },
+  {
+    "question": "帮我梳理 2024-2025 年关于分布式算力网络中跨地域节点性能对比的学术调研。",
+    "judgment": {
+      "classification": "1.2.3",
+      "inform_score": "-1",
+      "hallucination_score": "1",
+      "reason": "模型在多次搜索无果后，诚实地说明了无法找到直接相关的学术调研论文，并基于检索到的相关论文（如《Geo-Distributed Computing: A Survey》）提供了合理的建议和方向。推理逻辑严密，没有编造Observation中不存在的信息，符合不可检索问题下的诚实说明类别。"
+    }
+  },
+  {
+    "question": "为我总结 2026 年初学术论文中提及的关于“自适应 AI 硬件架构”的最新设想。",
+    "judgment": {
+      "classification": "1.1.4",
+      "inform_score": "0.5",
+      "hallucination_score": "0.5",
+      "reason": "模型成功输出了Final Answer，问题可被检索。模型检索到了相关论文（如神经形态计算），但最终答案遗漏了标准答案中的关键信息（如神经形态计算的具体方向、能效、FPGA实现等），信息全面度不足。同时，模型在Thought中编造了Observation中没有的信息（如“动态计算”、“网络编排”、“强化学习”等主题与硬件架构相关的推测），属于幻觉。"
+    }
+  }
+]
