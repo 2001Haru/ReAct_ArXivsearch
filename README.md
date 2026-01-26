@@ -1,2 +1,20 @@
-# ReAct_ArXivsearch
-This is a project designed to validate the effectiveness of ReAct in interactive tasks.
+# 我是README
+
+##### 这是本项目的数据与代码自述文件。这是一个探究ReAct对于小模型在检索交互任务上性能提升效果的项目。如果您想更细致地了解这个项目是做什么的，可以查看文档中的Project Report，其中详细记录了我们的意图与行动。
+
+
+
+##### 以下是各个文件主要用途：
+
+###### Data: 项目所有的raw data，包括微调数据集和最终性能评测的推理轨迹。其中还有一些报告中所用到的图表，您可以验证我们数据的真实性。
+
+###### LLM\_as\_Judge: 模型推理轨迹性能的评测文件。我们采用DeepSeek作为更大容量的大模型来评判待评测的轨迹。您可以在提示词中找到我们的分类式评价标准。
+
+###### arxivSearch: 任务主要所需的调用工具，可以检索特定时间内与关键词最相关的一定数量结果。
+
+###### TestData\_generate与TrainData\_generate: 微调训练数据集和测试数据集的标准答案生成。我们采用DeepSeek做初步的生成，之后人工清洗这些数据。
+
+###### evaluation: 模型面对测试数据集的推理轨迹生成。
+
+###### format\_converter: 微调数据转为ShareGPT格式所需的格式转换器。
+
