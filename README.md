@@ -1,4 +1,4 @@
-# README | 2026Winter_AI
+# README 
 
 ## 中文版
 
